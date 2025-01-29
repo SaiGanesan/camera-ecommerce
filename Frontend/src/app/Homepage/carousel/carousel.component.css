@@ -1,0 +1,41 @@
+/* Carousel container styling */
+.carousel {
+  width: 100%; /* Full width for responsiveness */
+  max-height: 85vh; /* Dynamic height to fit various screen sizes */
+  background-color: #2C2C2C; /* Dark gray background for the carousel */
+  position: relative; /* Ensure positioning for controls */
+  overflow: hidden;
+  z-index: 1; /* Avoid scrollbars on smaller devices */
+}
+
+/* Carousel item image styling */
+.carousel-item img {
+  height: 100vh; /* Ensure auto height to adapt images responsively */
+  object-fit: cover; /* Ensures the image covers the entire space without distortion */
+  width: 100%;
+  z-index: 1; /* Full width */
+}
+
+/* Ensure carousel items fill the height */
+.carousel-item {
+  height: 100%;
+  max-height: 500vh; /* Dynamic height for responsiveness */
+}
+
+/* Customize control buttons */
+.carousel-control-prev, 
+.carousel-control-next {
+  color: #E0E0E0; /* Light gray for control buttons */
+  filter: invert(1); /* White icons on dark background */
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  color: #FFFFFF; /* White on hover */
+  filter: invert(0.8); /* Slightly less white on hover */
+}
+
+
+
+
+

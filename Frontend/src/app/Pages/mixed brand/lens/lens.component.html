@@ -1,0 +1,19 @@
+<div class="lens-section">
+    <h2 class="section-title">Popular Lenses</h2>
+  
+    <!-- Lens Categories -->
+    <div class="lens-categories">
+      <div class="lens-category" *ngFor="let category of lensCategories">
+        <h3 class="category-title">{{ category.name }}</h3>
+        <br>
+        <div class="category-lenses">
+          <div class="lens-card" *ngFor="let lens of category.lenses">
+            <img [src]="lens.image" [alt]="lens.name" class="lens-image" />
+            <h4 class="lens-name">{{ lens.name }}</h4>
+            <p class="lens-description">{{ lens.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,64 @@
+<div class="canon-container">
+  <header class="brand-header">
+    <br>
+    <h1 class="brand-title">Canon: Inspire Greatness</h1>
+  </header>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <span class="spinner-icon"></span>
+    <p>Loading products...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <ng-container *ngIf="!loading && !errorMessage">
+    <ng-container *ngFor="let category of productCategories">
+      <section class="canon-section">
+        <header class="section-header">
+          <h2 class="section-title">{{ category.title }}</h2>
+        </header>
+
+        <div class="product-grid">
+          <div class="product-card" *ngFor="let product of category.products">
+            <img 
+              [src]="product.productImage || 'assets/placeholder.jpg'" 
+              [alt]="product.productName" 
+              class="product-image" 
+              loading="lazy" />
+
+            <h3 class="product-name">{{ product.productName }}</h3>
+            <p class="product-description">{{ product.description || 'No description available.' }}</p>
+
+            <p class="product-suitability" *ngIf="product.suitability">
+              <strong>Best for:</strong> {{ product.suitability }}
+            </p>
+
+            <p class="product-price">
+              <span class="new-price">₹{{ product.newPrice }}</span>
+              <span class="old-price" *ngIf="product.oldPrice">₹{{ product.oldPrice }}</span>
+            </p>
+
+            <p 
+              class="product-stock" 
+              [ngClass]="{'in-stock': product.inStock, 'out-of-stock': !product.inStock}">
+              {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+            </p>
+
+            <button 
+              class="add-to-cart-btn" 
+              [disabled]="!product.inStock"
+              (click)="addToCart(product)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </ng-container>
+  </ng-container>
+
+  <div *ngIf="!loading && productCategories.length === 0 && !errorMessage" class="no-products-message">
+    <p>No products available at the moment. Please check back later.</p>
+  </div>
+</div>

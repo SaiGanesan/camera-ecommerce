@@ -1,0 +1,184 @@
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+/* Overall Container */
+.cyberpunk-navbar {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #0b0b0b, #000000); /* Black gradient */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  justify-content: flex-start; /* Align content to the left */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Black gradient */
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ff4da6; /* Pink */
+  text-shadow: 0 0 5px #ff4da6, 0 0 10px #ff4da6;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-item {
+  margin: 20px 0;
+}
+
+.sidebar-button {
+  width: 100%;
+  background: linear-gradient(145deg, #333333, #444444); /* Dark grey buttons */
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  color: #ff4da6; /* Pink text */
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.sidebar-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 77, 166, 0.7); /* Pink glow */
+  background: linear-gradient(145deg, #2a2a2a, #3a3a3a); /* Slightly lighter grey */
+}
+
+.sidebar-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(255, 77, 166, 0.5);
+}
+
+/* Main Content */
+.main-container {
+  margin-left: 260px; /* Align with sidebar */
+  padding: 20px;
+  background-color: #000000;
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content to the top */
+  flex-direction: column;
+  padding-top: 30px; /* Add some space from top */
+}
+
+/* Container Title */
+.container h1 {
+  color: #ff66ff;
+  text-shadow: 0 0 5px #ff66ff, 0 0 15px #ff66ff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center; /* Center the title */
+}
+
+.container h3 {
+  color: #a0aec0;
+  font-size: 1.5rem;
+  text-align: center; /* Center the subtitle */
+}
+
+/* Table */
+.table {
+  width: 80%; /* Center table and increase width */
+  max-width: 1200px; /* Max width for large screens */
+  margin: 0 auto; /* Center the table horizontally */
+  border-collapse: collapse;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 15px 20px; /* Increased padding for readability */
+  text-align: left;
+  font-size: 1rem; /* Larger text for better readability */
+  line-height: 1.5;
+}
+
+.table th {
+  background-color: #333333;
+  color: #ff66ff;
+  text-shadow: 0 0 5px #ff66ff;
+}
+
+.table td {
+  border-top: 1px solid #444444;
+}
+
+.table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.table tr:hover {
+  background-color: #3a3a3a; /* Highlight row on hover */
+}
+
+.table td span.text-muted {
+  color: #888;
+}
+
+/* Button Styling */
+.btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+}
+
+.btn-danger:hover {
+  background-color: #ff6666;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+}
+
+.btn-danger:active {
+  background-color: #e60000;
+}
+
+/* Loading and Error Message */
+.alert {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 5px;
+}
+
+.alert-danger {
+  background-color: #ff4444;
+}

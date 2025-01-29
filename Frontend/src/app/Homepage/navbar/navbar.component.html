@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid d-flex justify-content-between">
+    <!-- Brand aligned to the left -->
+    <a class="navbar-brand" href="#">PixelPerfect</a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar items centered -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        
+        <!-- Dropdown for Camera -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Camera
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/nikonfinal" routerLinkActive="active-link" >Nikon</a></li>
+            <li><a class="dropdown-item" routerLink="/canonfinal" routerLinkActive="active-link">Canon</a></li>
+            <li><a class="dropdown-item" routerLink="/sonyfinal" routerLinkActive="active-link">Sony</a></li>
+            <li><a class="dropdown-item" routerLink="/viewall" routerLinkActive="active-link">View All</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/final" routerLinkActive="active-link">Accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/servicefinal" routerLinkActive="active-link">Service</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right Section (Sign In/Cart Links) -->
+    <div class="navbar-right d-flex align-items-center">
+      <!-- Sign-in button aligned to the right -->
+      <button id="signup" class="btn" routerLink="/signinfinal" routerLinkActive="active-link">Sign In/Up</button>
+
+      <!-- Cart Icon with FontAwesome -->
+      <button id="cart" class="btn" routerLink="/cartfinal" routerLinkActive="active-link">
+        <i class="fas fa-shopping-cart"></i> Cart
+      </button>
+    </div>
+  </div>
+</nav>

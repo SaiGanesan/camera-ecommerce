@@ -1,0 +1,36 @@
+/* General body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0vh; /* Ensure full viewport height */
+  margin: 0;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #000000; /* Black background */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7); /* Neon pink glow */
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+/* Footer content */
+.footer-content p {
+  margin: 0;
+  color: #b287f7; /* Light purple */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    font-size: 0.9rem;
+  }
+}

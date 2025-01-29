@@ -1,0 +1,17 @@
+<div class="features-description">
+    <h2 class="section-title">Find the Perfect Camera for Every Occasion</h2>
+    
+    <div class="photography-types-container">
+      <div class="photography-type" *ngFor="let photography of photographyTypes">
+        <div class="type-header">
+          <img [src]="photography.image" [alt]="photography.type" class="type-icon" />
+          <h3>{{ photography.type }}</h3>
+        </div>
+        <p class="type-description">{{ photography.description }}</p>
+        <ul class="type-features">
+          <li *ngFor="let feature of photography.features">{{ feature }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

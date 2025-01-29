@@ -1,0 +1,149 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #000000, #1a0033, #330033); /* Black to purple gradient */
+  padding: 15px 20px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7); /* Neon pink glow */
+  position: relative; /* Ensure navbar stays on top */
+  z-index: 100; /* Make sure navbar is above other elements */
+  font-family: 'Orbitron', sans-serif; /* Default font family for navbar */
+}
+
+/* Website Name (Left Section) */
+.navbar-brand {
+  font-size: 1.8rem;
+  color: #ff2eb3; /* Neon pink */
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif; /* Professional and subtle font */
+  text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3; /* Neon glow */
+}
+
+/* Navbar Links (Center) */
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #b287f7; /* Light purple */
+  text-decoration: none;
+  font-size: 1.0rem; /* Adjust font size */
+  font-family: 'Orbitron', sans-serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff2eb3; /* Neon pink */
+  text-shadow: 0 0 5px #ff2eb3, 0 0 10px #ff2eb3; /* Neon glow on hover */
+}
+
+/* Dropdown Menu Styles */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item .dropdown-toggle::after {
+  content: '';
+  border-left: 0.25em solid;
+  border-top: 0.25em solid;
+  border-color: white;
+  border-width: 0 0.25em 0.25em 0;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: #b287f7; /* Light purple */
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #ff2eb3; /* Neon pink hover */
+  color: #fff;
+}
+
+/* Right Section (Sign In/Cart Links) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-right .btn {
+  background-color: transparent;
+  border: 2px solid #b287f7;
+  color: #b287f7;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-right .btn:hover {
+  background-color: #b287f7;
+  color: #fff;
+}
+
+/* Cart Icon Styling */
+#cart i {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+#cart:hover {
+  background-color: #ff2eb3;
+  border-color: #ff2eb3;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

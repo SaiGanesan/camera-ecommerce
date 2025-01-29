@@ -1,0 +1,79 @@
+/* General Container */
+.choose-camera-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #1a0033; /* Dark purple background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.7); /* Neon pink glow */
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  /* Headings */
+  .cyberpunk-heading {
+    font-size: 2.5rem;
+    color: #ff2eb3; /* Neon pink */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3;
+  }
+  
+  .cyberpunk-subheading {
+    font-size: 1.8rem;
+    color: #b287f7; /* Light purple */
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #b287f7, 0 0 10px #b287f7;
+  }
+  
+  /* Paragraphs */
+  p {
+    color: #e0d4fc; /* Soft purple */
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Lists */
+  ul {
+    margin-left: 20px;
+    color: #e0d4fc;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li strong {
+    color: #ff2eb3; /* Neon pink emphasis */
+  }
+  
+  /* Final Tip */
+  .final-tip {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ff2eb3;
+    margin-top: 30px;
+    border-top: 2px solid #ff2eb3;
+    padding-top: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .choose-camera-container {
+      padding: 20px;
+    }
+  
+    .cyberpunk-heading {
+      font-size: 2rem;
+    }
+  
+    .cyberpunk-subheading {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  

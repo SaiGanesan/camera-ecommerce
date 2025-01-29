@@ -1,0 +1,121 @@
+.nikon-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a0033; /* Dark cyberpunk theme */
+  color: #ffffff;
+}
+
+.brand-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff2eb3; /* Neon pink for the title */
+  text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3, 0 0 30px #ff2eb3;
+  margin-bottom: 40px;
+}
+
+.nikon-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff2eb3; /* Neon pink for section headers */
+  text-shadow: 0 0 5px #ff2eb3, 0 0 10px #ff2eb3;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #330033; /* Dark purple card background */
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.9); /* Neon pink glow on hover */
+  border: 1px solid #ff2eb3;
+}
+
+.product-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #ff2eb3, 0 0 20px rgba(255, 20, 147, 0.5);
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ff2eb3; /* Neon pink for product names */
+  text-shadow: 0 0 5px #ff2eb3;
+}
+
+.product-description,
+.product-suitability {
+  font-size: 1rem;
+  color: #b287f7; /* Light purple text for descriptions */
+}
+
+.product-price {
+  margin-top: 10px;
+}
+
+.new-price {
+  color: #00ff9f; /* Neon green for new price */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.old-price {
+  color: #ff4d4d; /* Neon red for old price */
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #00ff9f; /* Neon green */
+  color: #1a0033; /* Dark background color for contrast */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #00cc80; /* Slightly darker green on hover */
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #555; /* Gray for disabled state */
+  cursor: not-allowed;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}

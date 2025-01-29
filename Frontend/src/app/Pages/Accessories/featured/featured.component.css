@@ -1,0 +1,69 @@
+.featured-accessories {
+  padding: 40px 20px;
+  background-color: #1a0033; /* Dark purple background */
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #fff; /* White color for the title */
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #2e003c; /* Darker purple for the product card */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: #3b004d; /* Lighter shade on hover */
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff2eb3; /* Neon pink text for product names */
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #b287f7; /* Light purple for price */
+  margin-bottom: 15px;
+}
+
+.btn-add-to-cart {
+  padding: 10px 20px;
+  background-color: #ff2eb3; /* Neon pink for the button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #d11f94; /* Slightly darker pink on hover */
+}

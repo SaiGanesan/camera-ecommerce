@@ -1,0 +1,14 @@
+<div class="feedback-section">
+    <h2 class="section-title">Customer Feedback</h2>
+  
+    <!-- Feedback Display -->
+    <div class="feedback-list">
+      <h3>What Our Customers Say</h3>
+      <div *ngFor="let feedback of feedbacks" class="feedback-item">
+        <h4>{{ feedback.name }}</h4>
+        <p>{{ feedback.feedback }}</p>
+        <p class="rating">Rating: {{ feedback.rating }} ⭐</p>
+      </div>
+    </div>
+  </div>
+  

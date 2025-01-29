@@ -1,0 +1,78 @@
+<div class="sony-container">
+  <!-- Brand Title -->
+  <header class="brand-header">
+    <br>
+    <h1 class="brand-title">Sony: Excellence in Photography</h1>
+  </header>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">
+    <span class="spinner-icon"></span>
+    <p>Loading products...</p>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <!-- Product Categories -->
+  <ng-container *ngIf="!loading && !errorMessage">
+    <ng-container *ngFor="let category of productCategories">
+      <section class="sony-section">
+        <!-- Section Title -->
+        <header class="section-header">
+          <h2 class="section-title">{{ category.title }}</h2>
+        </header>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+          <div class="product-card" *ngFor="let product of category.products">
+            <!-- Product Image -->
+            <img 
+              [src]="product.productImage || 'assets/placeholder.jpg'" 
+              [alt]="product.productName" 
+              class="product-image" 
+              loading="lazy" />
+
+            <!-- Product Name -->
+            <h3 class="product-name">{{ product.productName }}</h3>
+
+            <!-- Product Description -->
+            <p class="product-description">{{ product.description || 'No description available.' }}</p>
+
+            <!-- Product Suitability -->
+            <p class="product-suitability" *ngIf="product.suitability">
+              <strong>Best for:</strong> {{ product.suitability }}
+            </p>
+
+            <!-- Product Pricing -->
+            <p class="product-price">
+              <span class="new-price">₹{{ product.newPrice }}</span>
+              <span class="old-price" *ngIf="product.oldPrice">₹{{ product.oldPrice }}</span>
+            </p>
+
+            <!-- Product Stock Status -->
+            <p 
+              class="product-stock" 
+              [ngClass]="{'in-stock': product.inStock, 'out-of-stock': !product.inStock}">
+              {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+            </p>
+            <button 
+            class="add-to-cart-btn" 
+            [disabled]="!product.inStock"
+            (click)="addToCart(product)">
+            Add to Cart
+          </button>
+
+          </div>
+        </div>
+      </section>
+    </ng-container>
+  </ng-container>
+
+  <!-- No Products Message -->
+  <div *ngIf="!loading && productCategories.length === 0 && !errorMessage" class="no-products-message">
+    <p>No products available at the moment. Please check back later.</p>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="cyberpunk-navbar">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h1 class="sidebar-title">Admin Panel</h1>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <button class="sidebar-button" routerLink="/admin-add">Add Product</button>
+      </li>
+      <li class="sidebar-item">
+        <button class="sidebar-button" routerLink="/admin-view">View Products</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="container">
+      <h1>Admin View Products</h1>
+
+      <!-- Loading State -->
+      <div *ngIf="loading">
+        <p>Loading products...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div *ngIf="error" class="alert alert-danger">
+        {{ error }}
+      </div>
+
+      <!-- Product List -->
+      <div *ngIf="!loading && products.length === 0">
+        <h3>No products available.</h3>
+      </div>
+
+      <table class="table table-striped" *ngIf="!loading && products.length > 0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>New Price</th>
+            <th>Old Price</th>
+            <th>Brand</th>          <!-- Added Brand column -->
+            <th>Category</th>       <!-- Added Category column -->
+            <th>Suitability</th>    <!-- Added Suitability column -->
+            <th>In Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.description }}</td>
+            <td>₹{{ product.newPrice }}</td>
+            <td *ngIf="product.oldPrice; else noOldPrice">
+              ₹{{ product.oldPrice }}
+            </td>
+            <ng-template #noOldPrice>
+              <span class="text-muted">N/A</span>
+            </ng-template>
+            <td>{{ product.brand }}</td>         <!-- Displaying Brand -->
+            <td>{{ product.category }}</td>      <!-- Displaying Category -->
+            <td>{{ product.suitability }}</td>   <!-- Displaying Suitability -->
+            <td>{{ product.inStock ? 'Yes' : 'No' }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

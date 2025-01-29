@@ -1,0 +1,45 @@
+<div class="cart-container">
+  <h1>Your Shopping Cart</h1>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="loading-spinner">Loading cart...</div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <!-- Cart Items -->
+  <div *ngIf="!loading && (cart?.items?.length || 0) > 0" class="cart-items">
+    <div class="cart-item" *ngFor="let item of cart?.items || []">
+      
+      <div class="product-details">
+        <h3 class="product-name">{{ item.productName }}</h3>
+        <p class="product-price">₹{{ item.price }}</p>
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(item.productId)" class="quantity-button">-</button>
+          <span class="product-quantity">{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(item.productId)" class="quantity-button">+</button>
+        </div>
+        <button class="remove-button" (click)="removeItem(item.productId)">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty Cart Message -->
+  <div *ngIf="!loading && !(cart?.items?.length || 0)" class="empty-cart">
+    Your cart is empty.
+  </div>
+
+  <!-- Total Price -->
+  <div *ngIf="!loading && (cart?.items?.length || 0) > 0" class="cart-total">
+    <h2>Total: ₹{{ calculateTotal() }}</h2>
+  </div>
+
+  <!-- Clear Cart Button -->
+  <button
+    *ngIf="!loading && (cart?.items?.length || 0) > 0"
+    class="clear-cart"
+    (click)="clearCart()"
+  >
+    Clear Cart
+  </button>
+</div>

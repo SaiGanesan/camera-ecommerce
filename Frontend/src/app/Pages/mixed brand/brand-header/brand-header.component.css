@@ -1,0 +1,42 @@
+/* Header Styling */
+.camera-header {
+    background-color: #1a0033; /* Deep purple background */
+    color: #fff; /* White text */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff2eb3; /* Neon pink */
+    margin-bottom: 20px;
+    margin-bottom: 30px;text-shadow: 0 0 8px #ff2eb3, 0 0 15px #ff2eb3;
+    
+  }
+  
+  .header-description {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #d1b7f1; /* Light purple */
+    line-height: 1.6;
+    margin-top: 10px;
+    padding: 0 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 2rem;
+    }
+  
+    .header-description {
+      font-size: 1rem;
+    }
+  }
+  

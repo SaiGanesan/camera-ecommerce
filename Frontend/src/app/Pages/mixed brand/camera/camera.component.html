@@ -1,0 +1,19 @@
+<div class="camera-section">
+    <h2 class="section-title">Top Camera Brands</h2>
+    
+    <!-- Camera Categories -->
+    <div class="camera-categories">
+      <div class="camera-category" *ngFor="let category of cameraCategories">
+        <h3 class="category-title">{{ category.name }}</h3>
+        <br>
+        <div class="category-cameras">
+          <div class="camera-card" *ngFor="let camera of category.cameras">
+            <img [src]="camera.image" [alt]="camera.name" class="camera-image" />
+            <h4 class="camera-name">{{ camera.name }}</h4>
+            <p class="camera-description">{{ camera.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

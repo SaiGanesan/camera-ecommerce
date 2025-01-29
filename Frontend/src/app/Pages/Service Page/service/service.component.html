@@ -1,0 +1,77 @@
+<body>
+  <br>
+<div class="service-container">
+    <!-- Service Intro -->
+    <section class="service-intro">
+      <h1 class="title">Camera Services</h1>
+      <p>We offer a wide range of services to keep your camera in perfect condition.</p>
+    </section>
+    <br>
+  
+    <!-- Types of Services -->
+    <section class="service-types">
+      <h2 class="subtitle">Types of Services</h2>
+      <br>
+      <ul class="service-list">
+        <li>Camera Cleaning and Maintenance</li>
+        <li>Lens Repair and Calibration</li>
+        <li>Sensor Cleaning</li>
+        <li>Battery and Power Issues</li>
+        <li>Firmware Upgrades</li>
+        <li>Shutter Replacement</li>
+      </ul>
+    </section>
+    <br>
+  
+    <!-- Supported Services -->
+    <section class="supported-services">
+      <h2 class="subtitle">Supported Camera Brands</h2>
+      <br>
+      <div class="brand-logos">
+        <img src="\assets\service\nikon.png" alt="Nikon" />
+        <img src="\assets\service\canon.png" alt="Canon" />
+        <img src="\assets\service\sony.png" alt="Sony" />
+        <img src="\assets\service\fuji.png" alt="Fujifilm" />
+      </div>
+    </section>
+  <br>
+  <br>
+    <!-- Service Query Form -->
+    <section class="service-form">
+      <h2 class="subtitle">Submit a Service Request</h2>
+      <form (ngSubmit)="submitForm()" [formGroup]="serviceForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" formControlName="name" type="text" placeholder="Enter your full name" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" formControlName="email" type="email" placeholder="Enter your email" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="cameraBrand">Camera Brand</label>
+          <select id="cameraBrand" formControlName="cameraBrand" required>
+            <option value="">Select a brand</option>
+            <option value="Nikon">Nikon</option>
+            <option value="Canon">Canon</option>
+            <option value="Sony">Sony</option>
+            <option value="Fujifilm">Fujifilm</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="issue">Service Issue</label>
+          <textarea id="issue" formControlName="issue" rows="4" placeholder="Describe the issue"></textarea>
+        </div>
+  
+        <button type="submit" class="btn-submit" [disabled]="serviceForm.invalid">Submit Request</button>
+      </form>
+    </section>
+  </div>
+  <br>
+
+</body>
+  
+  

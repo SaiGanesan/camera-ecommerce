@@ -1,0 +1,13 @@
+<div class="accessory-catalog">
+    <h2 class="section-title">Accessory Catalog</h2>
+    <div class="product-grid">
+      <!-- Product Cards -->
+      <div class="product-card" *ngFor="let product of catalogProducts">
+        <img [src]="product.image" [alt]="product.name" class="product-image" />
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">{{ product.price | currency: 'INR' }}</p>
+        <button class="btn-add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a0033 !important; /* Ensure dark theme is applied */
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #ff2eb3; /* Neon pink */
+  text-align: center;
+  text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #b287f7; /* Light purple */
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Service Container */
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a0033; /* Explicitly set background for container */
+}
+
+/* Service Section */
+.service-section {
+  margin-bottom: 40px;
+}
+
+/* Service List */
+.service-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.service-list li {
+  background-color: #2d0354;
+  color: #b287f7;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.7);
+}
+
+/* Supported Services */
+.supported-services .brand-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.supported-services .brand-logos img {
+  height: 60px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.supported-services .brand-logos img:hover {
+  filter: brightness(1);
+}
+
+/* Service Form */
+.service-form {
+  background: #2d0354;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff2eb3;
+  font-weight: bold;
+}
+
+.service-form input,
+.service-form select,
+.service-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #330033;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+
+.service-form input:focus,
+.service-form select:focus,
+.service-form textarea:focus {
+  box-shadow: 0 0 5px #ff2eb3, 0 0 10px #ff2eb3;
+  outline: none;
+}
+
+.service-form textarea {
+  resize: none;
+}
+
+.service-form button {
+  background: #ff2eb3;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.service-form button:disabled {
+  background: #7a007a;
+  cursor: not-allowed;
+}
+
+.service-form button:hover:not(:disabled) {
+  background: #e0139e;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-form input,
+  .service-form select,
+  .service-form textarea {
+    font-size: 0.9rem;
+  }
+}

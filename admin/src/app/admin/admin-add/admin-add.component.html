@@ -1,0 +1,207 @@
+<div class="cyberpunk-navbar">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h1 class="sidebar-title">Admin Panel</h1>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <button class="sidebar-button" routerLink="/admin-add">Add Product</button>
+      </li>
+      <li class="sidebar-item">
+        <button class="sidebar-button" routerLink="/admin-view">View Products</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="add-product-container">
+      <h1 class="form-title">Admin Add Product</h1>
+      <div class="card">
+        <div class="card-body">
+          <form (ngSubmit)="createProduct()" class="product-form">
+            <!-- Product Name -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input
+                  type="text"
+                  id="productName"
+                  placeholder="Enter product name"
+                  [(ngModel)]="newProduct.productName"
+                  name="productName"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.productName" class="error-message">
+                  Product Name is required.
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  placeholder="Enter product description"
+                  [(ngModel)]="newProduct.description"
+                  name="description"
+                  rows="2"
+                  required
+                  class="form-textarea"
+                ></textarea>
+                <div *ngIf="formSubmitted && !newProduct.description" class="error-message">
+                  Description is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Brand -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="brand">Brand</label>
+                <input
+                  type="text"
+                  id="brand"
+                  placeholder="Enter product brand"
+                  [(ngModel)]="newProduct.brand"
+                  name="brand"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.brand" class="error-message">
+                  Brand is required.
+                </div>
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label for="category">Category</label>
+                <input
+                  type="text"
+                  id="category"
+                  placeholder="Enter product category (e.g., camera, lens)"
+                  [(ngModel)]="newProduct.category"
+                  name="category"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.category" class="error-message">
+                  Category is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Prices and Stock Status -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="newPrice">New Price</label>
+                <input
+                  type="number"
+                  id="newPrice"
+                  placeholder="Enter new price (e.g., 100.00)"
+                  [(ngModel)]="newProduct.newPrice"
+                  name="newPrice"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.newPrice" class="error-message">
+                  New Price is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="oldPrice">Old Price</label>
+                <input
+                  type="number"
+                  id="oldPrice"
+                  placeholder="Enter old price (optional)"
+                  [(ngModel)]="newProduct.oldPrice"
+                  name="oldPrice"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="inStock">In Stock</label>
+                <select
+                  id="inStock"
+                  [(ngModel)]="newProduct.inStock"
+                  name="inStock"
+                  required
+                  class="form-select"
+                >
+                  <option value="" disabled selected>Select stock status</option>
+                  <option [value]="true">In Stock</option>
+                  <option [value]="false">Out of Stock</option>
+                </select>
+                <div *ngIf="formSubmitted && newProduct.inStock === undefined" class="error-message">
+                  Please select the stock status.
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Tag, Image, and Suitability -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productTag">Product Tag</label>
+                <input
+                  type="text"
+                  id="productTag"
+                  placeholder="Enter product tag"
+                  [(ngModel)]="newProduct.productTag"
+                  name="productTag"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.productTag" class="error-message">
+                  Product Tag is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="productImage">Product Image URL</label>
+                <input
+                  type="text"
+                  id="productImage"
+                  placeholder="Enter product image URL"
+                  [(ngModel)]="newProduct.productImage"
+                  name="productImage"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.productImage" class="error-message">
+                  Product Image URL is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="suitability">Suitability</label>
+                <input
+                  type="text"
+                  id="suitability"
+                  placeholder="Enter suitability (e.g., Wildlife, Sports)"
+                  [(ngModel)]="newProduct.suitability"
+                  name="suitability"
+                  required
+                  class="form-input"
+                />
+                <div *ngIf="formSubmitted && !newProduct.suitability" class="error-message">
+                  Suitability is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="form-row buttons-row">
+              <button type="submit" class="btn btn-success" [disabled]="isLoading">
+                <span *ngIf="isLoading" class="spinner"></span>
+                Add Product
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+/* Overall Categories Section */
+.accessory-categories {
+    padding: 50px 20px;
+    background-color: #1a0033; /* Deep purple background */
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Section Title */
+  .categories-title {
+    font-size: 2.5rem;
+    color: #ff2eb3; /* Neon pink */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3;
+    margin-bottom: 40px;
+  }
+  
+  /* Categories Grid Layout */
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  /* Individual Category Card */
+  .category-card {
+    background-color: #330033; /* Darker purple for cards */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Category Card Hover Effect */
+  .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.7); /* Neon glow effect */
+  }
+  
+  /* Category Images */
+  .category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Category Titles */
+  .category-card h3 {
+    font-size: 1.5rem;
+    color: #b287f7; /* Light purple */
+    margin-bottom: 10px;
+  }
+  
+  /* Category Descriptions */
+  .category-card p {
+    font-size: 1rem;
+    color: #dddddd; /* Light gray */
+    font-family: 'Roboto', sans-serif;
+  }
+  

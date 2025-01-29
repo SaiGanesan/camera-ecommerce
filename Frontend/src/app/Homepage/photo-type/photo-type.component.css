@@ -1,0 +1,83 @@
+/* General Layout */
+.features-description {
+    padding: 40px 20px;
+    background-color: #000000; /* Black background */
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7); /* Neon glow */
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff2eb3; /* Neon pink */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3;
+  }
+  
+  /* Photography Types Container */
+  .photography-types-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Individual Photography Type */
+  .photography-type {
+    background: linear-gradient(145deg, #1a0033, #330033); /* Purple gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.5); /* Neon pink glow */
+  }
+  
+  .type-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .type-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff2eb3; /* Neon pink border */
+    box-shadow: 0 0 10px #ff2eb3;
+  }
+  
+  .type-header h3 {
+    font-size: 1.8rem;
+    color: #b287f7; /* Light purple */
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .type-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d1c4e9; /* Light greyish purple */
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .type-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .type-features li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #b287f7; /* Light purple */
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .photography-types-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
+  

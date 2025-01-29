@@ -1,0 +1,71 @@
+.lens-section {
+    background-color: #1a0033;
+    padding: 20px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #ff2eb3; /* Neon pink */
+    margin-bottom: 30px;
+    margin-bottom: 30px;text-shadow: 0 0 8px #ff2eb3, 0 0 15px #ff2eb3;
+  }
+  .category-title {
+    color: #b287f7; /* Light purple */
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #b287f7, 0 0 15px #b287f7;
+  }
+  
+  .lens-categories {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .lens-category {
+    margin-bottom: 40px;
+  }
+  
+  .category-title {
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .category-lenses {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .lens-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+  }
+  
+  .lens-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .lens-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .lens-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  

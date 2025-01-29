@@ -1,0 +1,26 @@
+.featured-contact {
+  background-color: #1a0033; /* Dark purple background */
+  padding: 30px 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.order-message {
+  font-size: 1.2rem;
+  color: #fff; /* White text color */
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0;
+}
+
+.contact-number {
+  font-weight: bold;
+  color: #ff2eb3; /* Neon pink color for contact number */
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-number:hover {
+  color: #d11f94; /* Darker neon pink on hover */
+}

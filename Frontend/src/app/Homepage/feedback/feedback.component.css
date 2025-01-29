@@ -1,0 +1,99 @@
+/* General Layout */
+.feedback-section {
+    padding: 40px 20px;
+    background-color: #000000; /* Black background */
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.7); /* Neon pink glow */
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff2eb3; /* Neon pink */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #ff2eb3, 0 0 20px #ff2eb3;
+  }
+  
+  /* Feedback Form */
+  .feedback-form {
+    background: linear-gradient(145deg, #1a0033, #330033); /* Purple gradient */
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .feedback-form h3 {
+    font-size: 1.8rem;
+    color: #b287f7;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ff2eb3;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    background-color: #1a0033;
+  }
+  
+  .feedback-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff2eb3;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #b287f7;
+  }
+  
+  /* Feedback List */
+  .feedback-list {
+    background: linear-gradient(145deg, #1a0033, #330033); /* Purple gradient */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .feedback-list h3 {
+    font-size: 1.8rem;
+    color: #b287f7;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ff2eb3;
+    border-radius: 10px;
+    background-color: #1a0033;
+  }
+  
+  .feedback-item h4 {
+    font-size: 1.5rem;
+    color: #b287f7;
+  }
+  
+  .feedback-item p {
+    font-size: 1rem;
+    color: #d1c4e9;
+  }
+  
+  .rating {
+    color: #ff2eb3;
+    font-weight: bold;
+  }
+  
